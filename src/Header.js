@@ -6,7 +6,7 @@ function Header() {
       <h1>Weather App</h1>
       <nav>
         <ul style={navStyle}>
-          <li><a href="/login">Logout</a></li>
+          <li><a href="/">Logout</a></li>
         </ul>
       </nav>
     </header>
