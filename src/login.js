@@ -19,7 +19,7 @@ const Login = () => {
       });
       
       console.log('Login successful:', response.data);
-      navigate('/'); 
+      navigate('/home'); 
     } catch (error) {
       console.error('Login failed:', error.message);
       setError('Invalid email or password');
