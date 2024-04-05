@@ -1,4 +1,4 @@
-// Registration.js
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./Register.css";
@@ -12,11 +12,11 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Reset error message
+    
     setError('');
 
     try {
-      // Send registration data to the server
+      
       const response = await axios.post('https://nodejs-jgs8.onrender.com/api/auth/signup', {
         username,
         email,
@@ -25,12 +25,12 @@ const Register = () => {
 
       console.log('Registration successful:', response.data);
 
-      // Clear form fields after successful registration
+      
       setUsername('');
       setEmail('');
       setPassword('');
     } catch (error) {
-      // Handle registration error
+      
       if (error.response) {
         setError(error.response.data.message);
       } else {
@@ -56,7 +56,7 @@ const Register = () => {
           <input
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)} // Make sure this is bound to setEmail
+            onChange={(e) => setEmail(e.target.value)} 
             placeholder="Email"
             className="input-field"
           />

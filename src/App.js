@@ -5,8 +5,7 @@ import RegistrationPage from './Register';
 import HomePage from './MapComponent';
 
 function App() {
-  // Assuming you have some state to track authentication
- // const isAuthenticated = false; // Change this based on your authentication logic
+  
 
   return (
     <Router>

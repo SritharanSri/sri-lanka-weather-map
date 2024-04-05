@@ -19,15 +19,14 @@ const Login = () => {
       });
       
       console.log('Login successful:', response.data);
-      navigate('/'); // Use navigate function to redirect to '/MapComponent'
-      // Redirect or perform any other actions upon successful login
+      navigate('/'); 
     } catch (error) {
       console.error('Login failed:', error.message);
       setError('Invalid email or password');
     }
   };
   const handleRegisterClick = () => {
-    navigate('/register'); // Use navigate function to redirect to '/registration'
+    navigate('/register'); 
   };
   return (
     <div className="login-container">

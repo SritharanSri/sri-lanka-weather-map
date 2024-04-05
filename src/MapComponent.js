@@ -1,4 +1,4 @@
-// src/MapComponent.js
+
 
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
@@ -10,26 +10,21 @@ function MapComponent() {
   const [weatherData, setWeatherData] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the API when the component mounts
+    
     axios.get('https://nodejs-jgs8.onrender.com/api/weather')
       .then(response => {
-        // Update the state with the data received from the API
+     
         setWeatherData(response.data);
       })
       .catch(error => {
-        // Handle any errors that occur during the fetch
+        
         console.error('Error fetching data:', error);
       });
   }, []);
-//const MapComponent = () => {
- // Example coordinates for Colombo, Sri Lanka
+
  const position = [7.8731, 80.7718];
 
-//  // Example data for demonstration
-//  const weatherData = [
-//     { name: 'Colombo', lat: 6.927079, lon: 79.861244, temp: 28, humidity: 75, pressure: 1013 },
-//     // Add more data points as needed
-//  ];
+
 
  return (
   <div>
